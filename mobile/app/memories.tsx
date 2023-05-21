@@ -72,7 +72,6 @@ export default function NewMemory() {
 
       <View className="mt-6 space-y-10">
         {memories.map((memory) => {
-          console.log(memory)
           return (
             <View key={memory.id} className="space-y-4">
               <View className="flex-row items-center gap-2">
