@@ -36,22 +36,22 @@ Este projeto está em um monorepo. Você precisará rodar o server e o mobile em
 
 O servidor precisa estar rodando para que o aplicativo móvel possa se autenticar e buscar os dados.
 
-# 1. Navegue até a pasta do servidor
+### 1. Navegue até a pasta do servidor
 cd server
 
-# 2. Instale as dependências
+### 2. Instale as dependências
 npm install
 
-# 3. Configure suas variáveis de ambiente
-# Crie um arquivo .env na raiz da pasta /server
-# Você precisará (no mínimo) de uma DATABASE_URL para o Prisma
-# Exemplo para PostgreSQL:
+### 3. Configure suas variáveis de ambiente
+- Crie um arquivo .env na raiz da pasta /server
+- Você precisará (no mínimo) de uma DATABASE_URL para o Prisma
+- Exemplo para PostgreSQL:
 DATABASE_URL="postgresql://user:password@localhost:5432/timecapsule?schema=public"
 
-# 4. Rode as migrações do Prisma para criar as tabelas no banco
+### 4. Rode as migrações do Prisma para criar as tabelas no banco
 npx prisma migrate dev
 
-# 5. Inicie o servidor de desenvolvimento
+### 5. Inicie o servidor de desenvolvimento
 npm run dev
 
 
@@ -61,25 +61,25 @@ npm run dev
 
 Com o servidor rodando, você pode iniciar o aplicativo móvel.
 
-# 1. Navegue até a pasta do aplicativo
+### 1. Navegue até a pasta do aplicativo
 cd mobile
 
-# 2. Instale as dependências
+### 2. Instale as dependências
 npm install
 
-# 3. Configure a URL da API
-# Verifique se há um arquivo de configuração de ambiente (ex: /src/services/api.js)
-# e garanta que o endereço da API aponta para o seu servidor local.
-# (Ex: 'http://localhost:3333' ou 'http://SEU_IP_LOCAL:3333' se for rodar no celular físico)
+### 3. Configure a URL da API
+-  Verifique se há um arquivo de configuração de ambiente (ex: /src/services/api.js)
+-  e garanta que o endereço da API aponta para o seu servidor local.
+- (Ex: 'http://localhost:3333' ou 'http://SEU_IP_LOCAL:3333' se for rodar no celular físico)
 
-# 4. Inicie o metro bundler do React Native
+### 4. Inicie o metro bundler do React Native
 npx react-native start
 
-# 5. Em um NOVO terminal, rode o app no emulador/simulador
-# Para Android:
+### 5. Em um NOVO terminal, rode o app no emulador/simulador
+#### Para Android:
 npx react-native run-android
 
-# Para iOS:
+#### Para iOS:
 npx react-native run-ios
 
 
